@@ -1,0 +1,4 @@
+# include CRT
+# note: need to remove the "lib" and ".a" parts of the .a built from crt
+PKG_CPPFLAGS =-I/Users/alexwoo/R/ffi/crt_install/include
+PKG_LIBS = -L/Users/alexwoo/R/ffi/crt_install/lib -laws-c-common -laws-checksums

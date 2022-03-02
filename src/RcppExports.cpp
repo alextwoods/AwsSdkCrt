@@ -10,6 +10,42 @@ Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
 Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
+// rcpp_aws_checksums_crc32
+uint32_t rcpp_aws_checksums_crc32(StringVector input, uint32_t previous);
+RcppExport SEXP _AwsSdkCrt_rcpp_aws_checksums_crc32(SEXP inputSEXP, SEXP previousSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< StringVector >::type input(inputSEXP);
+    Rcpp::traits::input_parameter< uint32_t >::type previous(previousSEXP);
+    rcpp_result_gen = Rcpp::wrap(rcpp_aws_checksums_crc32(input, previous));
+    return rcpp_result_gen;
+END_RCPP
+}
+// rcpp_aws_checksums_crc32c
+uint32_t rcpp_aws_checksums_crc32c(StringVector input, uint32_t previous);
+RcppExport SEXP _AwsSdkCrt_rcpp_aws_checksums_crc32c(SEXP inputSEXP, SEXP previousSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< StringVector >::type input(inputSEXP);
+    Rcpp::traits::input_parameter< uint32_t >::type previous(previousSEXP);
+    rcpp_result_gen = Rcpp::wrap(rcpp_aws_checksums_crc32c(input, previous));
+    return rcpp_result_gen;
+END_RCPP
+}
+// rcpp_handcoded_aws_checksums_crc32
+uint32_t rcpp_handcoded_aws_checksums_crc32(StringVector input, uint32_t previous);
+RcppExport SEXP _AwsSdkCrt_rcpp_handcoded_aws_checksums_crc32(SEXP inputSEXP, SEXP previousSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< StringVector >::type input(inputSEXP);
+    Rcpp::traits::input_parameter< uint32_t >::type previous(previousSEXP);
+    rcpp_result_gen = Rcpp::wrap(rcpp_handcoded_aws_checksums_crc32(input, previous));
+    return rcpp_result_gen;
+END_RCPP
+}
 // rcpp_hello_world
 List rcpp_hello_world();
 RcppExport SEXP _AwsSdkCrt_rcpp_hello_world() {
@@ -20,9 +56,35 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// warble_garble
+List warble_garble();
+RcppExport SEXP _AwsSdkCrt_warble_garble() {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    rcpp_result_gen = Rcpp::wrap(warble_garble());
+    return rcpp_result_gen;
+END_RCPP
+}
+// rcpp_sum
+double rcpp_sum(NumericVector v);
+RcppExport SEXP _AwsSdkCrt_rcpp_sum(SEXP vSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NumericVector >::type v(vSEXP);
+    rcpp_result_gen = Rcpp::wrap(rcpp_sum(v));
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
+    {"_AwsSdkCrt_rcpp_aws_checksums_crc32", (DL_FUNC) &_AwsSdkCrt_rcpp_aws_checksums_crc32, 2},
+    {"_AwsSdkCrt_rcpp_aws_checksums_crc32c", (DL_FUNC) &_AwsSdkCrt_rcpp_aws_checksums_crc32c, 2},
+    {"_AwsSdkCrt_rcpp_handcoded_aws_checksums_crc32", (DL_FUNC) &_AwsSdkCrt_rcpp_handcoded_aws_checksums_crc32, 2},
     {"_AwsSdkCrt_rcpp_hello_world", (DL_FUNC) &_AwsSdkCrt_rcpp_hello_world, 0},
+    {"_AwsSdkCrt_warble_garble", (DL_FUNC) &_AwsSdkCrt_warble_garble, 0},
+    {"_AwsSdkCrt_rcpp_sum", (DL_FUNC) &_AwsSdkCrt_rcpp_sum, 1},
     {NULL, NULL, 0}
 };
 
