@@ -49,14 +49,6 @@ rcpp_aws_crt_init <- function() {
     invisible(.Call(`_AwsSdkCrt_rcpp_aws_crt_init`))
 }
 
-awshc_test_error <- function(error) {
-    .Call(`_AwsSdkCrt_awshc_test_error`, error)
-}
-
-awshc_error_string <- function(error) {
-    .Call(`_AwsSdkCrt_awshc_error_string`, error)
-}
-
 rcpp_hello_world <- function() {
     .Call(`_AwsSdkCrt_rcpp_hello_world`)
 }

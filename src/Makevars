@@ -1,4 +1,4 @@
 # include CRT
 # note: need to remove the "lib" and ".a" parts of the .a built from crt
 PKG_CPPFLAGS =-I/Users/alexwoo/R/ffi/crt_install/include -I/Users/alexwoo/R/ffi/aws-crt-ffi/src
-PKG_LIBS = -L/Users/alexwoo/R/ffi/crt_install/lib -laws-c-common -laws-checksums -laws-c-io -laws-c-http -laws-c-cal -laws-c-compression -laws-c-auth
+PKG_LIBS = -L/Users/alexwoo/R/ffi/crt_install_2/lib -laws-crt-ffi -laws-c-common -laws-checksums -laws-c-io -laws-c-http -laws-c-cal -laws-c-compression -laws-c-auth

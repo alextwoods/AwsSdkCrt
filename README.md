@@ -59,7 +59,16 @@ cmake --build aws-checksums/build --target install
 
 ```
 
+### Building aws-crt-ffi
+Need to update api.h so that it exports useable symbols:
+Add: `#include <aws/common/macros.h>`
+And then wrap with `AWS_EXTERN_C_BEGIN` and `AWS_EXTERN_C_END`
+Then replace the API exports with: `AWS_COMMON_API`
+
+Need to also add: `#include <stdbool.h>`
+
 Note, need to do a recusrive init, w/ all the submodules.
+We build with shared libs off.
 ------------
 ```
 cmake -S aws-crt-ffi -B aws-crt-ffi/build -DCMAKE_INSTALL_PREFIX=/Users/alexwoo/R/ffi/crt_install_2 -DBUILD_SHARED_LIBS=OFF
@@ -72,7 +81,7 @@ cmake --build aws-crt-ffi/build --target install
 * https://dirk.eddelbuettel.com/code/rcpp/html/classRcpp_1_1String.html
 
 
-## Types and concersions
+## Types and conversions
 
 ### Strings
 ```

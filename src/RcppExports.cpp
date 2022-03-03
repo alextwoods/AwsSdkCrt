@@ -141,28 +141,6 @@ BEGIN_RCPP
     return R_NilValue;
 END_RCPP
 }
-// awshc_test_error
-int awshc_test_error(int error);
-RcppExport SEXP _AwsSdkCrt_awshc_test_error(SEXP errorSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< int >::type error(errorSEXP);
-    rcpp_result_gen = Rcpp::wrap(awshc_test_error(error));
-    return rcpp_result_gen;
-END_RCPP
-}
-// awshc_error_string
-String awshc_error_string(int error);
-RcppExport SEXP _AwsSdkCrt_awshc_error_string(SEXP errorSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< int >::type error(errorSEXP);
-    rcpp_result_gen = Rcpp::wrap(awshc_error_string(error));
-    return rcpp_result_gen;
-END_RCPP
-}
 // rcpp_hello_world
 List rcpp_hello_world();
 RcppExport SEXP _AwsSdkCrt_rcpp_hello_world() {
@@ -208,8 +186,6 @@ static const R_CallMethodDef CallEntries[] = {
     {"_AwsSdkCrt_rcpp_aws_crc32c", (DL_FUNC) &_AwsSdkCrt_rcpp_aws_crc32c, 2},
     {"_AwsSdkCrt_rcpp_handcoded_aws_checksums_crc32", (DL_FUNC) &_AwsSdkCrt_rcpp_handcoded_aws_checksums_crc32, 2},
     {"_AwsSdkCrt_rcpp_aws_crt_init", (DL_FUNC) &_AwsSdkCrt_rcpp_aws_crt_init, 0},
-    {"_AwsSdkCrt_awshc_test_error", (DL_FUNC) &_AwsSdkCrt_awshc_test_error, 1},
-    {"_AwsSdkCrt_awshc_error_string", (DL_FUNC) &_AwsSdkCrt_awshc_error_string, 1},
     {"_AwsSdkCrt_rcpp_hello_world", (DL_FUNC) &_AwsSdkCrt_rcpp_hello_world, 0},
     {"_AwsSdkCrt_warble_garble", (DL_FUNC) &_AwsSdkCrt_warble_garble, 0},
     {"_AwsSdkCrt_rcpp_sum", (DL_FUNC) &_AwsSdkCrt_rcpp_sum, 1},
