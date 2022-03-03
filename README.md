@@ -62,7 +62,7 @@ cmake --build aws-checksums/build --target install
 Note, need to do a recusrive init, w/ all the submodules.
 ------------
 ```
-cmake -S aws-crt-ffi -B aws-crt-ffi/build -DCMAKE_INSTALL_PREFIX=/Users/alexwoo/R/ffi/crt_install
+cmake -S aws-crt-ffi -B aws-crt-ffi/build -DCMAKE_INSTALL_PREFIX=/Users/alexwoo/R/ffi/crt_install_2 -DBUILD_SHARED_LIBS=OFF
 cmake --build aws-crt-ffi/build --target install
 
 ```
@@ -91,8 +91,15 @@ R CMD INSTALL AwsSdkCrt
 ```
 library(AwsSdkCrt)
 
-rcpp_aws_checksums_crc32("test", 0)
+rcpp_aws_crc32("test", 0)
 
 rcpp_handcoded_aws_checksums_crc32("test", 0) # should give 3632233996
 
 ```
+
+### Benchmarking
+```
+expr    min     lq     mean  median      uq    max neval
+digest 18.142 20.039 22.51841 22.0545 23.6805 55.714  1000
+ crt  6.904  8.289 10.04969  9.7265 11.3945 33.778  1000
+ ```
