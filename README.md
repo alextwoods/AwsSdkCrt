@@ -100,13 +100,25 @@ R CMD INSTALL AwsSdkCrt
 ```
 library(AwsSdkCrt)
 
-rcpp_aws_crc32("test", 0)
+aws_crc32("test", 0)
 
-rcpp_handcoded_aws_checksums_crc32("test", 0) # should give 3632233996
 
 ```
 
+Testing new code:
+```
+library(AwsSdkCrt)
+
+c <- new(CredentialsOptions, 'akid', 'secret')
+c$getAccessKeyId()
+c$getSecretKey()
+
+c <- NA
+gc() # destructor should get called.
+
 ### Benchmarking
+source("AwsSdkCrt/benchmark.R")
+
 ```
 expr    min     lq     mean  median      uq    max neval
 digest 18.142 20.039 22.51841 22.0545 23.6805 55.714  1000

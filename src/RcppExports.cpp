@@ -11,6 +11,18 @@ Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
 Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
+// test_callback
+NumericVector test_callback(NumericVector numvec, Function f);
+RcppExport SEXP _AwsSdkCrt_test_callback(SEXP numvecSEXP, SEXP fSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NumericVector >::type numvec(numvecSEXP);
+    Rcpp::traits::input_parameter< Function >::type f(fSEXP);
+    rcpp_result_gen = Rcpp::wrap(test_callback(numvec, f));
+    return rcpp_result_gen;
+END_RCPP
+}
 // rcpp_make_internal
 XPtr< Wrapper > rcpp_make_internal();
 RcppExport SEXP _AwsSdkCrt_rcpp_make_internal() {
@@ -32,91 +44,91 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// rcpp_hc_get_credentials
-uint32_t rcpp_hc_get_credentials();
-RcppExport SEXP _AwsSdkCrt_rcpp_hc_get_credentials() {
+// aws_credentials_from_chain
+uint32_t aws_credentials_from_chain();
+RcppExport SEXP _AwsSdkCrt_aws_credentials_from_chain() {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    rcpp_result_gen = Rcpp::wrap(rcpp_hc_get_credentials());
+    rcpp_result_gen = Rcpp::wrap(aws_credentials_from_chain());
     return rcpp_result_gen;
 END_RCPP
 }
-// rcpp_aws_error_debug_str
-String rcpp_aws_error_debug_str(int err);
-RcppExport SEXP _AwsSdkCrt_rcpp_aws_error_debug_str(SEXP errSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< int >::type err(errSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpp_aws_error_debug_str(err));
-    return rcpp_result_gen;
-END_RCPP
-}
-// rcpp_aws_error_name
-String rcpp_aws_error_name(int err);
-RcppExport SEXP _AwsSdkCrt_rcpp_aws_error_name(SEXP errSEXP) {
+// aws_error_debug_str
+String aws_error_debug_str(int err);
+RcppExport SEXP _AwsSdkCrt_aws_error_debug_str(SEXP errSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< int >::type err(errSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpp_aws_error_name(err));
+    rcpp_result_gen = Rcpp::wrap(aws_error_debug_str(err));
     return rcpp_result_gen;
 END_RCPP
 }
-// rcpp_aws_error_str
-String rcpp_aws_error_str(int err);
-RcppExport SEXP _AwsSdkCrt_rcpp_aws_error_str(SEXP errSEXP) {
+// aws_error_name
+String aws_error_name(int err);
+RcppExport SEXP _AwsSdkCrt_aws_error_name(SEXP errSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< int >::type err(errSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpp_aws_error_str(err));
+    rcpp_result_gen = Rcpp::wrap(aws_error_name(err));
     return rcpp_result_gen;
 END_RCPP
 }
-// rcpp_aws_last_error
-int rcpp_aws_last_error();
-RcppExport SEXP _AwsSdkCrt_rcpp_aws_last_error() {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    rcpp_result_gen = Rcpp::wrap(rcpp_aws_last_error());
-    return rcpp_result_gen;
-END_RCPP
-}
-// rcpp_aws_test_error
-int rcpp_aws_test_error(int err);
-RcppExport SEXP _AwsSdkCrt_rcpp_aws_test_error(SEXP errSEXP) {
+// aws_error_str
+String aws_error_str(int err);
+RcppExport SEXP _AwsSdkCrt_aws_error_str(SEXP errSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< int >::type err(errSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpp_aws_test_error(err));
+    rcpp_result_gen = Rcpp::wrap(aws_error_str(err));
     return rcpp_result_gen;
 END_RCPP
 }
-// rcpp_aws_crc32
-uint32_t rcpp_aws_crc32(StringVector input, uint32_t previous);
-RcppExport SEXP _AwsSdkCrt_rcpp_aws_crc32(SEXP inputSEXP, SEXP previousSEXP) {
+// aws_last_error
+int aws_last_error();
+RcppExport SEXP _AwsSdkCrt_aws_last_error() {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    rcpp_result_gen = Rcpp::wrap(aws_last_error());
+    return rcpp_result_gen;
+END_RCPP
+}
+// aws_test_error
+int aws_test_error(int err);
+RcppExport SEXP _AwsSdkCrt_aws_test_error(SEXP errSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< int >::type err(errSEXP);
+    rcpp_result_gen = Rcpp::wrap(aws_test_error(err));
+    return rcpp_result_gen;
+END_RCPP
+}
+// aws_crc32
+uint32_t aws_crc32(StringVector input, uint32_t previous);
+RcppExport SEXP _AwsSdkCrt_aws_crc32(SEXP inputSEXP, SEXP previousSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< StringVector >::type input(inputSEXP);
     Rcpp::traits::input_parameter< uint32_t >::type previous(previousSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpp_aws_crc32(input, previous));
+    rcpp_result_gen = Rcpp::wrap(aws_crc32(input, previous));
     return rcpp_result_gen;
 END_RCPP
 }
-// rcpp_aws_crc32c
-uint32_t rcpp_aws_crc32c(StringVector input, uint32_t previous);
-RcppExport SEXP _AwsSdkCrt_rcpp_aws_crc32c(SEXP inputSEXP, SEXP previousSEXP) {
+// aws_crc32c
+uint32_t aws_crc32c(StringVector input, uint32_t previous);
+RcppExport SEXP _AwsSdkCrt_aws_crc32c(SEXP inputSEXP, SEXP previousSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< StringVector >::type input(inputSEXP);
     Rcpp::traits::input_parameter< uint32_t >::type previous(previousSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpp_aws_crc32c(input, previous));
+    rcpp_result_gen = Rcpp::wrap(aws_crc32c(input, previous));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -173,22 +185,28 @@ BEGIN_RCPP
 END_RCPP
 }
 
+RcppExport SEXP _rcpp_module_boot_CrtModule();
+RcppExport SEXP _rcpp_module_boot_play();
+
 static const R_CallMethodDef CallEntries[] = {
+    {"_AwsSdkCrt_test_callback", (DL_FUNC) &_AwsSdkCrt_test_callback, 2},
     {"_AwsSdkCrt_rcpp_make_internal", (DL_FUNC) &_AwsSdkCrt_rcpp_make_internal, 0},
     {"_AwsSdkCrt_rcpp_use_internal", (DL_FUNC) &_AwsSdkCrt_rcpp_use_internal, 1},
-    {"_AwsSdkCrt_rcpp_hc_get_credentials", (DL_FUNC) &_AwsSdkCrt_rcpp_hc_get_credentials, 0},
-    {"_AwsSdkCrt_rcpp_aws_error_debug_str", (DL_FUNC) &_AwsSdkCrt_rcpp_aws_error_debug_str, 1},
-    {"_AwsSdkCrt_rcpp_aws_error_name", (DL_FUNC) &_AwsSdkCrt_rcpp_aws_error_name, 1},
-    {"_AwsSdkCrt_rcpp_aws_error_str", (DL_FUNC) &_AwsSdkCrt_rcpp_aws_error_str, 1},
-    {"_AwsSdkCrt_rcpp_aws_last_error", (DL_FUNC) &_AwsSdkCrt_rcpp_aws_last_error, 0},
-    {"_AwsSdkCrt_rcpp_aws_test_error", (DL_FUNC) &_AwsSdkCrt_rcpp_aws_test_error, 1},
-    {"_AwsSdkCrt_rcpp_aws_crc32", (DL_FUNC) &_AwsSdkCrt_rcpp_aws_crc32, 2},
-    {"_AwsSdkCrt_rcpp_aws_crc32c", (DL_FUNC) &_AwsSdkCrt_rcpp_aws_crc32c, 2},
+    {"_AwsSdkCrt_aws_credentials_from_chain", (DL_FUNC) &_AwsSdkCrt_aws_credentials_from_chain, 0},
+    {"_AwsSdkCrt_aws_error_debug_str", (DL_FUNC) &_AwsSdkCrt_aws_error_debug_str, 1},
+    {"_AwsSdkCrt_aws_error_name", (DL_FUNC) &_AwsSdkCrt_aws_error_name, 1},
+    {"_AwsSdkCrt_aws_error_str", (DL_FUNC) &_AwsSdkCrt_aws_error_str, 1},
+    {"_AwsSdkCrt_aws_last_error", (DL_FUNC) &_AwsSdkCrt_aws_last_error, 0},
+    {"_AwsSdkCrt_aws_test_error", (DL_FUNC) &_AwsSdkCrt_aws_test_error, 1},
+    {"_AwsSdkCrt_aws_crc32", (DL_FUNC) &_AwsSdkCrt_aws_crc32, 2},
+    {"_AwsSdkCrt_aws_crc32c", (DL_FUNC) &_AwsSdkCrt_aws_crc32c, 2},
     {"_AwsSdkCrt_rcpp_handcoded_aws_checksums_crc32", (DL_FUNC) &_AwsSdkCrt_rcpp_handcoded_aws_checksums_crc32, 2},
     {"_AwsSdkCrt_rcpp_aws_crt_init", (DL_FUNC) &_AwsSdkCrt_rcpp_aws_crt_init, 0},
     {"_AwsSdkCrt_rcpp_hello_world", (DL_FUNC) &_AwsSdkCrt_rcpp_hello_world, 0},
     {"_AwsSdkCrt_warble_garble", (DL_FUNC) &_AwsSdkCrt_warble_garble, 0},
     {"_AwsSdkCrt_rcpp_sum", (DL_FUNC) &_AwsSdkCrt_rcpp_sum, 1},
+    {"_rcpp_module_boot_CrtModule", (DL_FUNC) &_rcpp_module_boot_CrtModule, 0},
+    {"_rcpp_module_boot_play", (DL_FUNC) &_rcpp_module_boot_play, 0},
     {NULL, NULL, 0}
 };
 

@@ -3,7 +3,7 @@
 
 // [[Rcpp::export]]
 void rcpp_aws_crt_init(){
-  printf("init!\n");
    aws_crt_init();
+   printf("CRT initialized!\n");
    return;
 }
